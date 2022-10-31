@@ -3,20 +3,21 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and project title
-repository-name: eYY-3yp-project-template
-title: Project Template
+repository-name: e18-3yp-Automated-Mini-Greenhouse-Monitoring-And-Control-System
+title: Automated Mini-Greenhouse Monitoring And Control System
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
 # Project Title
+Automated mini-greenhouse monitoring and control system
 
 ---
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/18/118, Haritha Gunarathna, [email](mailto:e18118@email.com)
+-  E/18/149, Ishta Jayakody, [email](mailto:e18149@email.com)
+-  E/18/398, Nimuthu Wijerathne, [email](mailto:e18398@email.com)
 
 <!-- Image (photo/drawing of the final hardware) should be here -->
 
@@ -54,9 +55,32 @@ Testing done on hardware and software, detailed + summarized results
 
 All items and costs
 
-| Item          | Quantity  | Unit Cost  | Total  |
-| ------------- |:---------:|:----------:|-------:|
-| Sample item   | 5         | 10 LKR     | 50 LKR |
+| Item                                     | Quantity  | Unit Cost  | Total  |
+| -------------                            |:---------:|:----------:|-------:|
+| Relay Model                              | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Sr04 ultrasonic sensor                   | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Soil moisture sensor                     | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Ntc water proof temperature sensor       | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Grow light chip 20w                      | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| DHT22 TEMPURATURE AND HUMIDITY SENSOR    | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Ptc heating element                      | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Dc fans                                  | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Misting nozzle                           | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| 12v water solenoid valve                 | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| WiFi Bluetooth Dual Mode IoT Dev Board   | 1         | 1000 LKR   |1000 LKR|
+| -------------                            |:---------:|:----------:|-------:|
+| Total                                    | 1         | 1000 LKR   |1000 LKR|
+
 
 ## Conclusion
 
