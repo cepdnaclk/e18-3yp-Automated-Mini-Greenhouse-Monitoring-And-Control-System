@@ -58,16 +58,17 @@ All items and costs
 | Item                                     | Quantity  | Unit Cost  | Total  |
 |:----------------------------------------:|:---------:|:----------:|-------:|
 | Relay Model                              | 1         | 1000 LKR   |1000 LKR|
-| Sr04 ultrasonic sensor                   | 1         | 1000 LKR   |450 LKR|
+| Sr04 ultrasonic sensor                   | 1         | 450 LKR    | 450 LKR|
 | Soil moisture sensor                     | 1         | 1000 LKR   |1000 LKR|
-| Ntc water proof temperature sensor       | 1         | 1000 LKR   |1000 LKR|
-| Grow light chip 20w                      | 1         | 1000 LKR   |1000 LKR|
-| DHT22 TEMPURATURE AND HUMIDITY SENSOR    | 1         | 1000 LKR   |1000 LKR|
-| Ptc heating element                      | 1         | 1000 LKR   |1000 LKR|
-| Dc fans                                  | 1         | 1000 LKR   |1000 LKR|
-| Misting nozzle                           | 1         | 1000 LKR   |1000 LKR|
-| 12v water solenoid valve                 | 1         | 1000 LKR   |1000 LKR|
-| WiFi Bluetooth Dual Mode IoT Dev Board   | 1         | 1000 LKR   |1000 LKR|
+| Ntc water proof temperature sensor       | 1         |  450 LKR   | 450 LKR|
+| Grow light chip 20w                      | 1         | 2350 LKR   |2350 LKR|
+| Tec1 cooler                              | 1         | 1700 LKR   |1700 LKR|
+| DHT22 TEMPURATURE AND HUMIDITY SENSOR    | 1         | 1700 LKR   |1700 LKR|
+| Ptc heating element                      | 1         | 1700 LKR   |1700 LKR|
+| Dc fans                                  | 3         |  600 LKR   |1800 LKR|
+| Misting nozzle                           | 1         |  345 LKR   | 345 LKR|
+| 12v water solenoid valve                 | 2         | 1500 LKR   |3000 LKR|
+| WiFi Bluetooth Dual Mode IoT Dev Board   | 1         | 2100 LKR   |2100 LKR|
 | Total                                    | 1         | 1000 LKR   |1000 LKR|
 
 
