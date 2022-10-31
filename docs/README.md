@@ -58,7 +58,7 @@ All items and costs
 | Item                                     | Quantity  | Unit Cost  | Total  |
 |:----------------------------------------:|:---------:|:----------:|-------:|
 | Relay Model                              | 1         | 1000 LKR   |1000 LKR|
-| Sr04 ultrasonic sensor                   | 1         | 1000 LKR   |1000 LKR|
+| Sr04 ultrasonic sensor                   | 1         | 1000 LKR   |450 LKR|
 | Soil moisture sensor                     | 1         | 1000 LKR   |1000 LKR|
 | Ntc water proof temperature sensor       | 1         | 1000 LKR   |1000 LKR|
 | Grow light chip 20w                      | 1         | 1000 LKR   |1000 LKR|
@@ -69,7 +69,6 @@ All items and costs
 | 12v water solenoid valve                 | 1         | 1000 LKR   |1000 LKR|
 | WiFi Bluetooth Dual Mode IoT Dev Board   | 1         | 1000 LKR   |1000 LKR|
 | Total                                    | 1         | 1000 LKR   |1000 LKR|
-|:----------------------------------------:|:---------:|:----------:|-------:|
 
 
 ## Conclusion
