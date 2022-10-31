@@ -56,7 +56,7 @@ Testing done on hardware and software, detailed + summarized results
 All items and costs
 
 | Item                                     | Quantity  | Unit Cost  | Total  |
-| -------------                            |:---------:|:----------:|-------:|
+|:----------------------------------------:|:---------:|:----------:|-------:|
 | Relay Model                              | 1         | 1000 LKR   |1000 LKR|
 | -------------                            |:---------:|:----------:|-------:|
 | Sr04 ultrasonic sensor                   | 1         | 1000 LKR   |1000 LKR|
