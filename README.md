@@ -18,32 +18,32 @@ These projects will be automatically added into [https://projects.ce.pdn.ac.lk](
 
 ```
 {
-  "title": "This is the title of the project",
+  "title": "Automated mini-greenhouse monitoring and control system",
   "team": [
     {
-      "name": "Team Member Name 1",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
+      "name": "Haritha Gunarathna",
+      "email": "e18118@eng.pdn.ac.lk",
+      "eNumber": "E/18/118"
     },
     {
-      "name": "Team Member Name 2",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
+      "name": "Ishta Jayakody",
+      "email": "e18149@eng.pdn.ac.lk",
+      "eNumber": "E/18/149"
     },
     {
-      "name": "Team Member Name 3",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
+      "name": "Nimuthu Wijerathne",
+      "email": "e18398@eng.pdn.ac.lk",
+      "eNumber": "E/18/398"
     }
   ],
   "supervisors": [
     {
-      "name": "Dr. Supervisor 1",
-      "email": "email@eng.pdn.ac.lk"
+      "name": "Dr. Isuru Nawinne",
+      "email": "isurunawinne@eng.pdn.ac.lk"
     },
     {
-      "name": "Supervisor 2",
-      "email": "email@eng.pdn.ac.lk"
+      "name": "Dr. Mahanama Wickramasinghe",
+      "email": "mahanamaw@eng.pdn.ac.lk"
     }
   ],
   "tags": ["Web", "Embedded Systems"]
