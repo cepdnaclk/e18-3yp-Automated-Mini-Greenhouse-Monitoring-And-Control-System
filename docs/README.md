@@ -9,8 +9,7 @@ title: Automated Mini-Greenhouse Monitoring And Control System
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
-Automated mini-greenhouse monitoring and control system
+# Automated Mini-Greenhouse Monitoring And Control System
 
 ---
 
