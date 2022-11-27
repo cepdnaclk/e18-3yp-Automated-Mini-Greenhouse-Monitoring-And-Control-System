@@ -1,4 +1,4 @@
-import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, Button, StyleSheet, TouchableOpacity, Text} from "react-native";
 
 export default function TitleTextView({title,heightFromTop}) {
     return(

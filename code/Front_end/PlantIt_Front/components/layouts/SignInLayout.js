@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Image,ImageBackground} from 'react-native';
 import ButtonWhite from "../items/ButtonWhite" ;
 import TitleTextView from '../items/TitleTextView';
+import TextInput01 from '../items/TextInput01';
 
 function SignInLayout(){
     const image = require("./images/signIn.png");
@@ -13,13 +14,13 @@ function SignInLayout(){
                 <TitleTextView title="        " heightFromTop="-375%"></TitleTextView>
             </View>
 
+            
             <StatusBar style="auto" />
 
         </ImageBackground>
         
      );
 };
-
 
 
 const styles = StyleSheet.create({
@@ -35,7 +36,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         gap:"2rem",
         
-
     },
   });
 
