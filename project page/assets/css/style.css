@@ -13,6 +13,9 @@ body {
   color: #444444;
 }
 
+
+
+
 a {
   color: #1acc8d;
   text-decoration: none;
@@ -138,7 +141,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(1, 4, 136, 0.9);
+  background: rgba(03, 83, 06, 0.91);
   height: 60px;
 }
 
@@ -456,6 +459,11 @@ h6 {
   font-size: 24px;
 }
 
+#testimonials h1{
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  font-size: 34px;
+}
 
 #hero .btn-get-started {
   font-family: "Montserrat", sans-serif;
@@ -807,7 +815,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.png") center center no-repeat;
+  background: url("../img/3.jpg") center center no-repeat;
   background-size: contain;
   min-height: 300px;
 }
@@ -815,7 +823,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#3f43fd 50%, rgba(63, 67, 253, 0.4) 52%);
+  background: radial-gradient(rgba(6, 90, 9, 0.85) 50%, rgba(03, 83, 06, 0.91) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -856,14 +864,14 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid rgba(63, 67, 253, 0.7);
+  border: 5px solid rgba(03, 83, 06, 0.91);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid #3f43fd;
+  border-left: 15px solid rgba(03, 83, 06, 0.91);
   transform: scale(20);
 }
 
@@ -910,9 +918,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Software
+# Features
 --------------------------------------------------------------*/
-.software .icon-box {
+.features .icon-box {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -920,30 +928,30 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.software .icon-box i {
+.features .icon-box i {
   font-size: 32px;
   padding-right: 10px;
-  line-height: 5;
+  line-height: 1;
 }
 
-.software .icon-box h3 {
+.features .icon-box h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 5;
+  line-height: 1;
   font-size: 16px;
 }
 
-.software .icon-box h3 a {
+.features .icon-box h3 a {
   color: #010483;
   transition: ease-in-out 0.3s;
 }
 
-.software .icon-box h3 a:hover {
+.features .icon-box h3 a:hover {
   color: #01036f;
 }
 
-.software .icon-box:hover {
+.features .icon-box:hover {
   background: #ebebff;
 }
 
@@ -999,7 +1007,7 @@ section {
 # Details
 --------------------------------------------------------------*/
 .details .content+.content {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .details .content h3 {
@@ -1045,46 +1053,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Solution
---------------------------------------------------------------*/
-
-.solution {
-  padding: 80px 0;
-  background: url("../img/plant.jpg") no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-}
-
-#solution h1{
-  color: rgba(255, 255, 255, 1);
-  margin-bottom: 40px;
-  font-size: 34px;
-}
-
-.solution::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(1, 3, 111, 0.2);
-}
-
-@media (min-width: 1024px) {
-  .solution{
-    background-attachment: fixed;
-  }
-}
-
-/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
   background: url("../img/cta-bg.jpg") no-repeat;
-  background-position: center center;
+   background-position: center center; 
   background-size: cover;
   position: relative;
 }
@@ -1096,7 +1070,17 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(1, 3, 111, 0.8);
+  background: rgba(03, 83, 06, 0.7); 
+}
+
+.testimonials h1 {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcfc;
 }
 
 .testimonials .section-header {
@@ -1109,13 +1093,13 @@ section {
 }
 
 .testimonials .testimonial-item {
-  text-align: center;
+  text-align: left;
   color: #fff;
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
-  border-radius: 50%;
+  width: 400px;
+  /* border-radius: 50%; */
   border: 6px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
 }
@@ -1612,7 +1596,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #010351;
+  background: rgba(3, 73, 5, 0.95);
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
@@ -1624,7 +1608,7 @@ section {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #010246;
+  background: rgba(3, 73, 5, 0.91);
   color: #fff;
   border-top: 4px solid #1acc8d;
   text-align: center;
@@ -1746,7 +1730,7 @@ section {
 }
 
 #footer .copyright {
-  border-top: 1px solid #010479;
+  border-top: 1px solid rgba(2, 54, 4, 0.91);
   text-align: center;
   padding-top: 30px;
 }
@@ -1762,4 +1746,155 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+}
+ /* Progress bar*/
+
+ .progress{
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+.progress:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 12px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress > span{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left{
+  left: 0;
+}
+.progress .progress-bar{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+.progress .progress-left .progress-bar{
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.progress .progress-right{
+  right: 0;
+}
+.progress .progress-right .progress-bar{
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: #44484b;
+  font-size: 24px;
+  color: #fff;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.progress.blue .progress-bar{
+  border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar{
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar{
+  border-color: #fdba04;
+}
+.progress.yellow .progress-left .progress-bar{
+  animation: loading-3 1s linear forwards 1.8s;
+}
+.progress.pink .progress-bar{
+  border-color: #ed687c;
+}
+.progress.pink .progress-left .progress-bar{
+  animation: loading-4 0.4s linear forwards 1.8s;
+}
+.progress.green .progress-bar{
+  border-color: #1abc9c;
+}
+.progress.green .progress-left .progress-bar{
+  animation: loading-5 1.2s linear forwards 1.8s;
+}
+@keyframes loading-1{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+}
+@keyframes loading-2{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(144deg);
+      transform: rotate(144deg);
+  }
+}
+@keyframes loading-3{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+}
+@keyframes loading-4{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(36deg);
+      transform: rotate(36deg);
+  }
+}
+@keyframes loading-5{
+  0%{
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(126deg);
+      transform: rotate(126deg);
+  }
+}
+@media only screen and (max-width: 990px){
+  .progress{ margin-bottom: 20px; }
 }
