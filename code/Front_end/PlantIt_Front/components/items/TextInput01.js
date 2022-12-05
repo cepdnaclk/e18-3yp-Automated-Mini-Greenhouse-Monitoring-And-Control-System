@@ -1,35 +1,60 @@
-import { View, StyleSheet, Text,TextInput} from "react-native";
+import { View, StyleSheet, Text , TextInput} from "react-native";
 
-export default function TextInput01({title,heightFromTop}) {
+export default function TextInput01({text}) {
     return(
-        <View>
-            <TextInput style ={styles.body }>
-                
-            </TextInput>
+        <View style={styles.container}>
+            <Text style={styles.box1}>{text}</Text>
+            <TextInput style={styles.input}></TextInput>
         </View>
+        
+            
+        
     ); 
 }
 
 const styles = StyleSheet.create({
-    body:{
-        textAlign: "center",
-        justifyContent:"center",
-        alignItems: "center"
-
+    
+    container: {
+        //flex: 0.15,
+        backgroundColor: "#D28716",
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        width:260,
+        height:80,
+        alignSelf:"center",
+        borderRadius:15,
+        
+        
+      },
+    
+    input:{
+        borderWidth:0,
+        borderColor: "#7777",
+        paddingLeft:0,
+        paddingBottom:0,
+        width:230,
+        
+        //backgroundColor:"violet",
+        color:"#FFFF",
+        height:30,
+        borderBottomColor:"#FFFF",
+        borderBottomWidth:2,
+        
+        
     },
 
-    container:{
-        flexDirection: "column",
-        gap:"1rem",
-        flexWrap: "wrap"
-
+    box1:{
+        //backgroundColor:"blue",
+        alignSelf:"flex-start",
+        paddingLeft:15,
+        paddingBottom:5,
+        paddingTop:0,
+        color:"#FFFF",
+        fontSize:20
+        
+        
     },
-
-    titleText: {
-      fontSize: 60,
-      fontWeight: "bold",
-      color: "white",
-
-    },
+    
+    
     
   });
