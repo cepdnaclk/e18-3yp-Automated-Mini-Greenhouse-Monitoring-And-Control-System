@@ -12,8 +12,8 @@ function SignInLayout(){
         <ImageBackground source={image} style ={styles.container}>
             
             <View style={styles.container2}>
-                <TitleTextView title="Sign In" heightFromTop="-240%"></TitleTextView>
-                <TitleTextView title="        " heightFromTop="-375%"></TitleTextView>
+                <TitleTextView title="Sign In" heightFromTop="-240%" lengthLeft="-30%"></TitleTextView>
+                
             </View>
 
             

@@ -1,11 +1,11 @@
 import { View, Button, StyleSheet, TouchableOpacity, Text} from "react-native";
 
-export default function TitleTextView({title,heightFromTop}) {
+export default function TitleTextView({title,heightFromTop,lengthLeft}) {
     return(
         
            <View style ={styles.body }>
                 <View style={styles.container}>
-                    <Text style={[styles.titleText , {top : heightFromTop}]}>{title}</Text>
+                    <Text style={[styles.titleText , {top : heightFromTop},{left:lengthLeft}]}>{title}</Text>
                 </View>
            </View>
         
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     container:{
         flexDirection: "column",
         gap:"1rem",
-        flexWrap: "wrap"
+        
 
     },
 
