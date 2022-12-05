@@ -1,9 +1,9 @@
 import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
 
-export default function ButtonWhite({text, heightFromTop}) {
+export default function ButtonWhite({text, heightFromTop , lengthLeft}) {
     return(
         <TouchableOpacity>
-           <View style ={[styles.button, {top : heightFromTop} ]}>
+           <View style ={[styles.button, {top : heightFromTop},{left:lengthLeft} ]}>
                 <Text style={styles.buttonText}>{text}</Text>
            </View>
         </TouchableOpacity>
