@@ -1,8 +1,8 @@
 import { View, StyleSheet, Text , TextInput} from "react-native";
 
-export default function TextInput01({text}) {
+export default function TextInput01({text,heightFromTop}) {
     return(
-        <View style={styles.container}>
+        <View style={[styles.container,{top:heightFromTop}]}>
             <Text style={styles.box1}>{text}</Text>
             <TextInput style={styles.input}></TextInput>
         </View>
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         height:80,
         alignSelf:"center",
         borderRadius:15,
+        
         
         
       },

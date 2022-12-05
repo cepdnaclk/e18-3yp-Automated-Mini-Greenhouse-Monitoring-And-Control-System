@@ -5,7 +5,8 @@ export default function App() {
 
   return (
     //<LoginLayout></LoginLayout>
-    <TextInput01 text={"ishta"}></TextInput01>
+    //<TextInput01 text={"ishta"}></TextInput01>
+    <SignInLayout></SignInLayout>
   );
 }
 
