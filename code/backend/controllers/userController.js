@@ -7,11 +7,18 @@ const asyncHandler = require('express-async-handler');
 
 
 
+
+
+const getAll = asyncHandler(async(req,res) => {
+    const userData = await User.find();
+    res.status(200).json(userData);
+})
+
 // @desc Register User
 // @route POST /api/users
 // @access Public
 const registerUser =asyncHandler(async(req,res) =>{
-    const{name,email,password} = req.body;
+    const{name,email,password,macID} = req.body;
 
     if(!name || !email || !password){
         res.status(400)
@@ -20,29 +27,44 @@ const registerUser =asyncHandler(async(req,res) =>{
 
     //check if user exists
     const userExists = await User.findOne({email})
+    const MacExists = await User.findOne({macID})
 
     if(userExists){
         res.status(400)
         throw new Error('User already Exists')
     }
 
+    if(MacExists){
+        res.status(400)
+        throw new Error('Devices already Belong to another User')
+    }
+
     //Hash password
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password,salt)
 
+    const Token = null
     //Create user
     const user = await User.create({
         name,
         email,
-        password:hashedPassword
+        password:hashedPassword,
+        macID,
+        Token
     })
 
     if(user){
+        const TokenCreate =generateToken(user._id)
         res.status(201).json({
             _id:user.id,
             name:user.name,
             email:user.email,
-            token:generateToken(user._id),
+            macID:user.macID,
+            token:TokenCreate,
+        })
+    let UpdatedToken = {"token":TokenCreate}
+        const updatedUser = await User.findByIdAndUpdate(user.id,UpdatedToken,{
+            new: false,
         })
     }else{
         res.status(400)
@@ -95,5 +117,6 @@ const generateToken = (id) =>{
 module.exports = {
     registerUser,
     loginUser,
-    getMe
+    getMe,
+    getAll
 }

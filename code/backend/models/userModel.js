@@ -13,6 +13,14 @@ const userSchema = mongoose.Schema({
     password:{
         type: String,
         required: [true, 'Please add a password']
+    },
+    macID:{
+        type: String,
+        required: [true, 'Please add a macID'],
+        unique:true
+    },
+    token:{
+        type: String,
     }
 },
 {
