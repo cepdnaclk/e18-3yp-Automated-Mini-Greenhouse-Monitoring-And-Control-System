@@ -1884,6 +1884,12 @@ section {
 }
 /* -------------------------------------------- */
 /* The actual timeline (the vertical ruler) */
+
+.current-stage{
+  background-color: #ACBB59 !important;
+}
+
+
 .main-timeline-4 {
   position: relative;
 }
