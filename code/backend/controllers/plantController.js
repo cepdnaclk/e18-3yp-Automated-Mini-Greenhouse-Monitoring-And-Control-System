@@ -19,37 +19,47 @@ const getPlants = asyncHandler(async(req,res) => {
 // @access Private
 
 const setPlants = asyncHandler(async(req,res) => {
-    if(!req.body.name){
+    if(!req.body.minTemp){
         res.status(400);
-        throw new Error('Please add Name of the Plant');
+        throw new Error('Please add the Minimum Temperature');
     }
-    if(!req.body.temperature){
+    if(!req.body.maxTemp){
         res.status(400);
-        throw new Error('Please add a Temperature Requirement');
+        throw new Error('Please add the Maximum Temperature');
     }
-    if(!req.body.humidity){
+    if(!req.body.minHumidity){
         res.status(400);
-        throw new Error('Please add a Humidity Requirement');
+        throw new Error('Please add the Minimum Humidity');
     }
-    if(!req.body.soilmoisture){
+    if(!req.body.maxHumidity){
         res.status(400);
-        throw new Error('Please add a Soil Moisture Reading');
+        throw new Error('Please add the Maximum Humidity');
     }
-    if(!req.body.soiltype){
+    if(!req.body.minSoilMoisture){
         res.status(400);
-        throw new Error('Please add Soil Type Requirement');
+        throw new Error('Please add Minimum Soil Moisture');
     }
-    if(!req.body.nutrition){
+    if(!req.body.maxSoilMoisture){
         res.status(400);
-        throw new Error('Please add Nutrition Requirement');
+        throw new Error('Please add Maximum Soil Moisture');
+    }
+    if(!req.body.minLightingHours){
+        res.status(400);
+        throw new Error('Please add Minimum Lighting Hours Required');
+    }
+    if(!req.body.maxLightingHours){
+        res.status(400);
+        throw new Error('Please add Maximum Lighting Hours Required');
     }
     const sensorData = await SensorData.create({
-        name: req.body.name,
-        temperature: req.body.temperature,
-        humidity: req.body.humidity,
-        soilmoisture: req.body.soilmoisture,
-        soiltype: req.body.soiltype,
-        nutrition: req.body.nutrition,
+        minTemp: req.body.minTemp,
+        maxTemp: req.body.maxTemp,
+        minHumidity: req.body.minHumidity,
+        maxHumidity: req.body.maxHumidity,
+        minSoilMoisture: req.body.minSoilMoisture,
+        maxSoilMoisture: req.body.maxSoilMoisture,
+        minLightingHours: req.body.minLightingHours,
+        maxLightingHours: req.body.maxLightingHours,
         user: req.user.id
     })
     res.status(200).json(sensorData);
@@ -91,30 +101,30 @@ const updatePlants = asyncHandler(async(req,res) => {
 // @route DELETE /api/sensorData/:id
 // @access Private
 
-const DeletePlants = asyncHandler(async(req,res) => {
-    const sensorData = await SensorData.findById(req.params.id);
+// const DeletePlants = asyncHandler(async(req,res) => {
+//     const sensorData = await SensorData.findById(req.params.id);
 
-    if(!sensorData){
-        res.status(400);
-        throw new Error('Data not found')
-    }
+//     if(!sensorData){
+//         res.status(400);
+//         throw new Error('Data not found')
+//     }
 
-    const user =await User.findById((req.user.id))
+//     const user =await User.findById((req.user.id))
 
-    //Check for user
-    if(!user){
-        res.status(401)
-        throw new Error('User Not found')
-    }
-    if(sensorData.user.toString() !== user.id){
-        res.status(401)
-        throw new Error('User not Authorized')
-    }
+//     //Check for user
+//     if(!user){
+//         res.status(401)
+//         throw new Error('User Not found')
+//     }
+//     if(sensorData.user.toString() !== user.id){
+//         res.status(401)
+//         throw new Error('User not Authorized')
+//     }
 
-    await sensorData.remove()
+//     await sensorData.remove()
     
-    res.status(200).json({id: req.params.id});
-})
+//     res.status(200).json({id: req.params.id});
+// })
 
 
 
@@ -122,5 +132,4 @@ module.exports = {
     getPlants,
     setPlants,
     updatePlants,
-    DeletePlants
 }

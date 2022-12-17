@@ -23,9 +23,10 @@ const getLatestReading = asyncHandler(async(req,res) => {
 // @access Private
 
 const setReading = asyncHandler(async(req,res) => {
+
     if(!req.body.temperature){
         res.status(400);
-        throw new Error('Please add a temperature Reading');
+        throw new Error('Please add a Temperature Reading');
     }
     if(!req.body.humidity){
         res.status(400);
@@ -35,10 +36,20 @@ const setReading = asyncHandler(async(req,res) => {
         res.status(400);
         throw new Error('Please add a Soil Moisture Reading');
     }
+    if(!req.body.plantHeight){
+        res.status(400);
+        throw new Error('Please add a Plant Height Reading');
+    }
+    if(!req.body.lightDuration){
+        res.status(400);
+        throw new Error('Please add a Light Duration Reading');
+    }
     const sensorData = await SensorData.create({
         temperature: req.body.temperature,
         humidity: req.body.humidity,
+        plantHeight: req.body.plantHeight,
         soilmoisture: req.body.soilmoisture,
+        lightDuration: req.body.lightDuration,
         user: req.user.id
     })
     res.status(200).json(sensorData);
