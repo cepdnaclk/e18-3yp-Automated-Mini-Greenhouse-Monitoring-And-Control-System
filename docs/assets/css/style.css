@@ -14,6 +14,14 @@ body {
 }
 
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    /* margin-top: 30px; */
+}
+
 
 
 a {
@@ -1016,7 +1024,8 @@ section {
 # Details
 --------------------------------------------------------------*/
 .details .content+.content {
-  margin-top: 100px;
+
+  margin-top: 25px;
 }
 
 .details .content h3 {
@@ -1875,6 +1884,12 @@ section {
 }
 /* -------------------------------------------- */
 /* The actual timeline (the vertical ruler) */
+
+.current-stage{
+  background-color: #1ACC8D !important;
+}
+
+
 .main-timeline-4 {
   position: relative;
 }
