@@ -14,10 +14,18 @@ const sensorSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add Humidity Reading'], 
     },
+    plantHeight:{
+        type: String,
+        required: [true, 'Please add a plantHeight Reading']
+    },
     soilmoisture:{
         type: String,
         required: [true, 'Please add a SoilMoisture Reading']
-    }
+    },
+    lightDuration:{
+        type: String,
+        required: [true, 'Please add a LigthDuration Reading']
+    },
 },{
     timestamps: true,
 })

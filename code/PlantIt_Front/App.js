@@ -14,7 +14,8 @@ import SignUpLayout from './components/layouts/SignUpLayout';
 import ControlLayout from './components/layouts/ControlLayout';
 import { Authprovider } from './components/context/AuthContext';
 import Navigation from './Navigation'
-
+import { Provider } from 'react-redux';
+import { Store } from './components/redux/store';
 
 
 
@@ -46,9 +47,11 @@ export default function App() {
           <Stack.Screen name='Control' component={ControlLayout}/>
         </Stack.Navigator>
       </NavigationContainer> */}
+      <Provider store ={Store}>
       <Navigation>
 
       </Navigation>
+      </Provider>
     </Authprovider>
     </>
 

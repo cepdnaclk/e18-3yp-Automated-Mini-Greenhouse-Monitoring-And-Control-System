@@ -9,6 +9,7 @@ export const Authprovider = ({children}) =>{
     
 
     const[userInfo,setUserInfo] = useState({})
+    const[sensorInfo,setSensorInfo] = useState({})
     const [splashLoading,setSplashLoading] = useState(false)
 
     const UserRegister = (name,email,macID,password) =>{
@@ -17,7 +18,7 @@ export const Authprovider = ({children}) =>{
         //  console.log(macID)
         //  console.log(password)
 
-        console.log(`${BASE_URL}users/`)
+         console.log(`${BASE_URL}users/`)
  
         let body ={
             name:name,
@@ -68,6 +69,32 @@ export const Authprovider = ({children}) =>{
         setUserInfo({})
     }
 
+    //--------------------------------------------------
+    const GetSensorData = () =>{
+        // console.log(name)
+        //  console.log(email)
+        // console.log(macID)
+        // console.log(password)
+
+        console.log(`${BASE_URL}sensorData/latest`)
+ 
+        axios
+        .get(
+            `${BASE_URL}/users/login`,
+            {},
+            {
+                headers: {Authorization: `Bearer ${userInfo.token}`},
+            },
+            )
+        .then(res =>{
+            let sensorInfo = res.data;
+            setSensorInfo(sensorInfo);
+            AsyncStorage.setItem('sensorInfo', JSON.stringify(sensorInfo));
+            console.log(sensorInfo);
+        });
+    };
+    //--------------------------------------------------
+
     const isLoggedIn = async() => {
         try {
             setSplashLoading(true);
@@ -89,6 +116,7 @@ export const Authprovider = ({children}) =>{
         isLoggedIn();
     },[]);
 
+
     return(
     <>
     <AuthContext.Provider 
@@ -97,6 +125,7 @@ export const Authprovider = ({children}) =>{
         UserLogin,
         userInfo,
         logout,
+        sensorInfo,
         splashLoading
         }}>
             {children}
