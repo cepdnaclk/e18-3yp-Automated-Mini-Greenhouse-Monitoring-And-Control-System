@@ -202,11 +202,11 @@ function DashBoardLayout({navigation}){
                 ))} */}
                 {sensorInfo && fetchedData?(
                     <>
-                <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature} highVal={fetchedData.maxTemp} lowVal={fetchedData.minTemp} optVal={"1.111"} heightFromTop="10%"></DashboardCard>
-                <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="11%"></DashboardCard>
-                <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="12%"></DashboardCard>
-                <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture} highVal={fetchedData.maxSoilMoisture} lowVal={fetchedData.minSoilMoisture} optVal={"1.111"} heightFromTop="13%"></DashboardCard>
-                <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration} highVal={fetchedData.maxLightingHours} lowVal={fetchedData.minLightingHours} optVal={"1.111"} heightFromTop="14%"></DashboardCard>
+                <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature+' Celsius'} highVal={fetchedData.maxTemp} lowVal={fetchedData.minTemp} optVal={"1.111"} heightFromTop="10%"></DashboardCard>
+                <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity+' %'} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="11%"></DashboardCard>
+                <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight+' cm'} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="12%"></DashboardCard>
+                <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture+' %'} highVal={fetchedData.maxSoilMoisture} lowVal={fetchedData.minSoilMoisture} optVal={"1.111"} heightFromTop="13%"></DashboardCard>
+                <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration+' hours'} highVal={fetchedData.maxLightingHours} lowVal={fetchedData.minLightingHours} optVal={"1.111"} heightFromTop="14%"></DashboardCard>
                 </>
                 ):(
                 //     !fetchedData?(

@@ -291,6 +291,7 @@ const styles = StyleSheet.create({
     container2:{
         flexDirection: "column",
         gap:"2rem",
+        top:'0%'
         
     },
 

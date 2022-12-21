@@ -28,7 +28,7 @@ const ChatScreen=() => {
       },
       {
         _id: 2,
-        text: 'Hello I am Ishta',
+        text: 'Hello I am Madushan',
         image:'',
         createdAt: new Date(),
         user: {
