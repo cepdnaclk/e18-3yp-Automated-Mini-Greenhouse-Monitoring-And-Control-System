@@ -11,7 +11,7 @@ import axios from "axios";
 import { BASE_URL } from "../../config";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { AuthContext } from '../context/AuthContext';
-import {LineChart,BarChart,PieChart,ProgressChart,ContributionGraph,StackedBarChart} from "react-native-chart-kit";
+import {LineChart,PieChart,ProgressChart,ContributionGraph,StackedBarChart} from "react-native-chart-kit";
 import { useSelector,useDispatch } from 'react-redux';
 import { setID } from '../redux/action';
 import {PlantReducer} from '../redux/reducers'
@@ -202,21 +202,23 @@ function DashBoardLayout({navigation}){
                 ))} */}
                 {sensorInfo && fetchedData?(
                     <>
-                <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature} highVal={fetchedData.maxTemp} lowVal={fetchedData.minTemp} optVal={"1.111"} heightFromTop="-17%"></DashboardCard>
-                <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="-16%"></DashboardCard>
-                <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="-15%"></DashboardCard>
-                <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture} highVal={fetchedData.maxSoilMoisture} lowVal={fetchedData.minSoilMoisture} optVal={"1.111"} heightFromTop="-14%"></DashboardCard>
-                <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration} highVal={fetchedData.maxLightingHours} lowVal={fetchedData.minLightingHours} optVal={"1.111"} heightFromTop="-13%"></DashboardCard>
+                <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature} highVal={fetchedData.maxTemp} lowVal={fetchedData.minTemp} optVal={"1.111"} heightFromTop="10%"></DashboardCard>
+                <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="11%"></DashboardCard>
+                <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight} highVal={fetchedData.maxHumidity} lowVal={fetchedData.minHumidity} optVal={"1.111"} heightFromTop="12%"></DashboardCard>
+                <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture} highVal={fetchedData.maxSoilMoisture} lowVal={fetchedData.minSoilMoisture} optVal={"1.111"} heightFromTop="13%"></DashboardCard>
+                <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration} highVal={fetchedData.maxLightingHours} lowVal={fetchedData.minLightingHours} optVal={"1.111"} heightFromTop="14%"></DashboardCard>
                 </>
-                ):(!fetchedData?(
-                    <>
-                    <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-17%"></DashboardCard>
-                    <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-16%"></DashboardCard>
-                    <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-15%"></DashboardCard>
-                    <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-14%"></DashboardCard>
-                    <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-13%"></DashboardCard>
-                    </> 
                 ):(
+                //     !fetchedData?(
+                //     <>
+                //     <DashboardCard icon={imageIcon1} currentVal={sensorInfo.temperature} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-17%"></DashboardCard>
+                //     <DashboardCard icon={imageIcon2} currentVal={sensorInfo.humidity} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-16%"></DashboardCard>
+                //     <DashboardCard icon={imageIcon3} currentVal={sensorInfo.plantHeight} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-15%"></DashboardCard>
+                //     <DashboardCard icon={imageIcon5} currentVal={sensorInfo.soilmoisture} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-14%"></DashboardCard>
+                //     <DashboardCard icon={imageIcon4} currentVal={sensorInfo.lightDuration} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-13%"></DashboardCard>
+                //     </> 
+                // ):
+                // (
                     <>
                     <DashboardCard icon={imageIcon1} currentVal={''} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-17%"></DashboardCard>
                     <DashboardCard icon={imageIcon2} currentVal={''} highVal={''} lowVal={''} optVal={"1.111"} heightFromTop="-16%"></DashboardCard>
@@ -226,30 +228,30 @@ function DashBoardLayout({navigation}){
                     </>
                 )
                     
-                )}
+                }
                 </View>
-                {/* <View top={"7%"}>
+                { <View top={"11%"}>
                         
                         <LineChart
                             data={{
-                            labels: ["January", "February", "March", "April", "May", "June"],
+                            labels: ["0", "1", "2", "3", "4", "5"],
                             datasets: [
                                 {
                                 data: [
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100,
-                                    Math.random() * 100
+                                    0.3 * 100,
+                                    0.3 * 100,
+                                    0.5 * 100,
+                                    0.3 * 100,
+                                    0.2 * 100,
+                                    0.3 * 100,
                                 ]
                                 }
                             ]
                             }}
                             width={Dimensions.get("window").width} // from react-native
                             height={200}
-                            yAxisLabel="$"
-                            yAxisSuffix="k"
+                            yAxisLabel=""
+                            yAxisSuffix="%"
                             yAxisInterval={1} // optional, defaults to 1
                             chartConfig={{
                             backgroundColor: "#e26a00",
@@ -273,11 +275,12 @@ function DashBoardLayout({navigation}){
                             borderRadius: 16
                             }}
                         />
-                </View> */}
+                </View> }
 
                <View style={styles.container3}>
-                    <LogoutButton text={"Exit"} heightFromTop="100%" onPress={Logout} ></LogoutButton>
-                    <ButtonWhite text={"Control"} heightFromTop="100%" location={() => navigation.navigate('Control')} ></ButtonWhite> 
+                    <LogoutButton text={"Exit"} heightFromTop="-1%" onPress={Logout} ></LogoutButton>
+                    <ButtonWhite text={"Control"} heightFromTop="-1%" location={() => navigation.navigate('Control')} ></ButtonWhite>
+                    <ButtonWhite text={"CHAT"} heightFromTop="-1%" location={() => navigation.navigate('Chat')}></ButtonWhite> 
                 </View>
             
             
@@ -310,12 +313,14 @@ const styles = StyleSheet.create({
 
     container3:{
         paddingTop:80,
+        width:350,
+       // backgroundColor:"green",
         
         flexDirection: "row",
 
         //backgroundColor:"red",
 
-        justifyContent:"space-between"
+        justifyContent:"space-around"
         
         
         

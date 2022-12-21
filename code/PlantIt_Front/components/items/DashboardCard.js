@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         //justifyContent: 'flex-start',
         width:350,
-        height:90,
+        height:80,
         alignSelf:"center",
         borderRadius:10,
         flexDirection:"row",
