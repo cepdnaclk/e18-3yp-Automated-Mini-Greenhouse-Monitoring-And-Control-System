@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert} from 'react-native';
+import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert,ScrollView, KeyboardAvoidingView} from 'react-native';
 import ButtonWhite from "../items/ButtonWhite" ;
 import TitleTextView from '../items/TitleTextView';
 import TextInput01 from '../items/TextInput01';
@@ -87,7 +87,9 @@ function SignUpLayout({navigation}){
 
     // ------------------------------------------
     return(
-        <ImageBackground source={image} style ={styles.container}>
+
+        
+        <ImageBackground source={image} style ={styles.container} >
 
             <Loader visible ={loading} />
             
@@ -108,6 +110,7 @@ function SignUpLayout({navigation}){
             password
             />  */}
 
+            <View style={{top:'10%'}}>
             <TextInput01 
             placeholder="Enter Your name" 
             text={"User Name"} 
@@ -119,7 +122,8 @@ function SignUpLayout({navigation}){
             onChangeText={text =>handleOnChange(text,'name')}
             />
 
-            <TextInput01 
+            <TextInput01
+             
             placeholder="Enter Your Email" 
             text={"Email"} 
             heightFromTop="14%"
@@ -131,8 +135,8 @@ function SignUpLayout({navigation}){
             />
 
             <TextInput01 
-            placeholder="Enter Your Device MacAdress" 
-            text={"MacAddress"} 
+            placeholder="Enter Your Device Number" 
+            text={"Device Number"} 
             heightFromTop="16%" 
             error={errors.macID}
             onForcus={() =>{
@@ -153,18 +157,22 @@ function SignUpLayout({navigation}){
             onChangeText={text =>handleOnChange(text,'password')}
             />
             
+            </View>
             <StatusBar style="auto" />
 
             
 
             <Signupbutton
             text={"sign up"} 
-            heightFromTop="330%" 
+            heightFromTop="320%" 
             lengthLeft="17%" 
             onPress ={validate}
             /> 
+            
 
         </ImageBackground>
+        
+        
         
      );
 };

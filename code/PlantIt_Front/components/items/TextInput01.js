@@ -44,15 +44,16 @@ export default function TextInput01(
             {password &&
 
             <Icon
-            style={{fontSize:22,color:'white'}}
+            style={{fontSize:22,color:'white',top:'-85%'}}
             onPress={()=>sethidePassword(!hidePassword)}
             name={hidePassword?'eye-outline':'eye-off-outline'}
+            
             />
             }
 
         
             {error &&
-            <Text style={{color:"#e80606",fontSize:12,marginTop:3} }>{error}</Text>
+            <Text style={{color:"#e80606",fontSize:12,marginTop:3,top:'-59%',alignSelf:'flex-end',paddingRight:'5%'} }>{error}</Text>
             }
             
                 
