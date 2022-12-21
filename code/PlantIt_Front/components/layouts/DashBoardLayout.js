@@ -276,8 +276,8 @@ function DashBoardLayout({navigation}){
                 </View> */}
 
                <View style={styles.container3}>
-                    <LogoutButton text={"Exit"} heightFromTop="100%" onPress={Logout} ></LogoutButton>
-                    <ButtonWhite text={"Control"} heightFromTop="100%" location={() => navigation.navigate('Control')} ></ButtonWhite> 
+                    <LogoutButton text={"Exit"} heightFromTop="190%" onPress={Logout} ></LogoutButton>
+                    <ButtonWhite text={"Control"} heightFromTop="190%" location={() => navigation.navigate('Control')} ></ButtonWhite> 
                 </View>
             
             
@@ -310,6 +310,8 @@ const styles = StyleSheet.create({
 
     container3:{
         paddingTop:80,
+        //backgroundColor:"green",
+        width:350,
         
         flexDirection: "row",
 
