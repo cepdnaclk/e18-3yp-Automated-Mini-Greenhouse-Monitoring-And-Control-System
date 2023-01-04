@@ -13,7 +13,8 @@ import { AuthContext } from '../context/AuthContext';
 
 
 function SignUpLayout({navigation}){
-    const image = require("./images/signUp.png");
+    //const image = require("./images/signUp.png");
+    const image = require("./images/logInScreen.jpg");
     const val = useContext(AuthContext);
 
     // -------------------------------------
@@ -93,11 +94,8 @@ function SignUpLayout({navigation}){
 
             <Loader visible ={loading} />
             
-            <View style={styles.container2}>
-                <TitleTextView title="Sign Up"
-                heightFromTop="-190%"
-                lengthLeft="-30%"
-                />
+            <View style={styles.container3} >
+                <TitleTextView title="Sign Up..." heightFromTop="0%" ></TitleTextView>
                 
                 
             </View>
@@ -110,11 +108,12 @@ function SignUpLayout({navigation}){
             password
             />  */}
 
-            <View style={{top:'10%'}}>
+            <View style={styles.container2}>
             <TextInput01 
             placeholder="Enter Your name" 
+            placeholderTextColor="#808080"
             text={"User Name"} 
-            heightFromTop="12%"
+            heightFromTop="0%"
             error={errors.name}
             onForcus={() =>{
                 handleError(null,'name');
@@ -124,9 +123,10 @@ function SignUpLayout({navigation}){
 
             <TextInput01
              
-            placeholder="Enter Your Email" 
+            placeholder="Enter Your Email"
+            placeholderTextColor="#808080" 
             text={"Email"} 
-            heightFromTop="14%"
+            heightFromTop="0%"
             error={errors.email}
             onForcus={() =>{
                 handleError(null,'email');
@@ -135,9 +135,10 @@ function SignUpLayout({navigation}){
             />
 
             <TextInput01 
-            placeholder="Enter Your Device Number" 
+            placeholder="Enter Your Device Number"
+            placeholderTextColor="#808080" 
             text={"Device Number"} 
-            heightFromTop="16%" 
+            heightFromTop="0%" 
             error={errors.macID}
             onForcus={() =>{
                 handleError(null,'macID');
@@ -146,9 +147,10 @@ function SignUpLayout({navigation}){
             />
 
             <TextInput01 
-            placeholder="Enter Your Password" 
+            placeholder="Enter Your Password"
+            placeholderTextColor="#808080" 
             text={"Password"} 
-            heightFromTop="18%" 
+            heightFromTop="0%" 
             error={errors.password}
             onForcus={() =>{
                 handleError(null,'password');
@@ -164,8 +166,8 @@ function SignUpLayout({navigation}){
 
             <Signupbutton
             text={"sign up"} 
-            heightFromTop="320%" 
-            lengthLeft="17%" 
+            heightFromTop="30%" 
+            lengthLeft="26%" 
             onPress ={validate}
             /> 
             
@@ -191,8 +193,32 @@ const styles = StyleSheet.create({
     },
 
     container2:{
+        flex: 0.85,
+      //backgroundColor: "#fff",
+      alignItems: 'center',
+      justifyContent: 'center',
+      width:"80%",
+      marginTop:"20%",
+      borderColor:"#ffff",
+      borderWidth:5,
+      justifyContent:"space-around",
+      
+      
+      //opacity:0.5,
+      backgroundColor:"rgba(0,0,0,0.4)",
+      
+      
+
+    },
+
+    container3:{
         flexDirection: "row",
-        gap:"2rem",
+        //gap:"2rem",
+        marginTop:"0%",
+        marginLeft:"10%",
+        justifyContent:"flex-start",
+        alignSelf:"flex-start",
+        
         
     },
   });

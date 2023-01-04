@@ -34,7 +34,8 @@ export default function TextInput01(
             onFocus={()=>{
                 onForcus();
                 setIsForcused(true);
-            }}
+            }
+            }
 
             onBlur={()=>{
                 setIsForcused(false);
@@ -69,13 +70,14 @@ const styles = StyleSheet.create({
     
     container: {
         //flex: 0.15,
-        backgroundColor: "#D28716",
+        //backgroundColor: "#D28716",
         alignItems: 'center',
         justifyContent: 'flex-start',
         width:260,
         height:70,
         alignSelf:"center",
         borderRadius:15,
+        
         
         
         

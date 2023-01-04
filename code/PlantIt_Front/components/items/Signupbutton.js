@@ -16,20 +16,24 @@ const styles = StyleSheet.create({
     // ...
     button: {
       
-      backgroundColor: "#ffff",
-      borderRadius: 20,
+      //backgroundColor: "#ffff",
+      //borderRadius: 20,
       paddingVertical: 10,
       paddingHorizontal: 20,
-      top : "10%",
+      //top : "10%",
       // minWidth:"60%",
       justifyContent : "center",
       alignItems: "flex-end",
+      borderWidth:3,
+      borderColor:"#ffff",
+      //padding:"%20",
+      
 
       
     },
     buttonText: {
       fontSize: 18,
-      color: "#372604",
+      color: "#ffff",
       fontWeight: "bold",
       textAlign: "center",
       textTransform: "uppercase"

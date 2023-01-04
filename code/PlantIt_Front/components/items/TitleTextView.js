@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
 
     titleText: {
-      fontSize: 60,
+      fontSize: 70,
       fontWeight: "bold",
       color: "white",
 

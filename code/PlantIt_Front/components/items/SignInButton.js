@@ -16,13 +16,15 @@ const styles = StyleSheet.create({
     // ...
     button: {
       
-      backgroundColor: "#372604",
-      borderRadius: 20,
+      //backgroundColor: "#372604",
+      //borderRadius: 20,
       paddingVertical: 10,
       paddingHorizontal: 20,
       top : "10%",
       justifyContent : "center",
       alignItems: "flex-end",
+      borderWidth:3,
+      borderColor:"#ffff"
       
     },
     buttonText: {
