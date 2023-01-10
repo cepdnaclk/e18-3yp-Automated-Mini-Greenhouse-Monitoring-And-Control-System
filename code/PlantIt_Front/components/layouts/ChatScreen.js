@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { Bubble, GiftedChat } from 'react-native-gifted-chat';
 import axios from 'axios';
-const image = require("./images/ChatScreen.png");
+const image = require("./images/logInScreen.jpg");
 
 const ChatScreen=() => {
 
@@ -99,12 +99,12 @@ const ChatScreen=() => {
         {...props}
         wrapperStyle={{
           right:{
-            backgroundColor:'#372604'
+            backgroundColor:"rgba(0,0,0,0.85)"
           },
 
           left:{
             //backgroundColor:'#D28716'
-            backgroundColor:'#FFFF'
+            backgroundColor:"rgba(255,255,255,0.5)",
           }
           
         }}/>
