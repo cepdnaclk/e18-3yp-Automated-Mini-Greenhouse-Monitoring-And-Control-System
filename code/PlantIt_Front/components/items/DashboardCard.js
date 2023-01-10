@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     
     container: {
         //flex: 0.15,
-        backgroundColor: "#FFFF",
+        backgroundColor:"rgba(0,0,0,0.8)",
         alignItems: 'center',
         //justifyContent: 'flex-start',
         width:350,
@@ -45,7 +45,9 @@ const styles = StyleSheet.create({
         borderRadius:10,
         flexDirection:"row",
         paddingBottom:10,
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        borderColor:"white",
+        borderWidth:1
 
       },
 
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
         
         paddingTop:8,
         
-        color:"#372604",
+        color:"white",
         fontSize:15,
         fontWeight:"300"
         

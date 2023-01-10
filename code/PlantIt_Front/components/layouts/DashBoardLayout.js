@@ -17,7 +17,7 @@ import { setID } from '../redux/action';
 import {PlantReducer} from '../redux/reducers'
 
 function DashBoardLayout({navigation}){
-    const image = require("./images/Dashboard.png");
+    const image = require("./images/logInScreen.jpg");
     const imageIcon1= require("./images/temperature-low.png");
     const imageIcon2= require("./images/humidityImage.png");
     const imageIcon3= require("./images/heightImage.png");
@@ -230,7 +230,7 @@ function DashBoardLayout({navigation}){
                     
                 }
                 </View>
-                { <View top={"11%"}>
+                { <View top={"8%"}>
                         
                         <LineChart
                             data={{
@@ -246,6 +246,7 @@ function DashBoardLayout({navigation}){
                                     0.3 * 100,
                                 ]
                                 }
+                                
                             ]
                             }}
                             width={Dimensions.get("window").width} // from react-native
@@ -253,35 +254,38 @@ function DashBoardLayout({navigation}){
                             yAxisLabel=""
                             yAxisSuffix="%"
                             yAxisInterval={1} // optional, defaults to 1
+
                             chartConfig={{
-                            backgroundColor: "#e26a00",
-                            backgroundGradientFrom: "#fb8c00",
-                            backgroundGradientTo: "#ffa726",
+                                backgroundColor:"#ffff",
+                            
                             decimalPlaces: 2, // optional, defaults to 2dp
-                            color: (opacity = 1) => "#372604",
-                            labelColor: (opacity = 1) => "#372604",
+                            color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                            labelColor: (opacity = 1) => "#ffff",
                             style: {
                                 borderRadius: 16
                             },
                             propsForDots: {
                                 r: "6",
                                 strokeWidth: "2",
-                                stroke: "#ffa726"
+                                //stroke: "#ffff"
                             }
                             }}
+
                             bezier
                             style={{
-                            marginVertical: 8,
-                            borderRadius: 16
+                            marginVertical: 9,
+                            borderRadius: 1,
+                            backgroundColor:"#ffff"
+                            
                             }}
                         />
                 </View> }
 
                <View style={styles.container3}>
 
-                    <LogoutButton text={"Exit"} heightFromTop="-1%" onPress={Logout} ></LogoutButton>
-                    <ButtonWhite text={"Control"} heightFromTop="-1%" location={() => navigation.navigate('Control')} ></ButtonWhite>
-                    <ButtonWhite text={"CHAT"} heightFromTop="-1%" location={() => navigation.navigate('Chat')}></ButtonWhite> 
+                    <LogoutButton text={"Exit"} heightFromTop="-20%" onPress={Logout} ></LogoutButton>
+                    <ButtonWhite text={"Control"} heightFromTop="-20%" location={() => navigation.navigate('Control')} ></ButtonWhite>
+                    <ButtonWhite text={"CHAT"} heightFromTop="-20%" location={() => navigation.navigate('Chat')}></ButtonWhite> 
 
                 </View>
             
@@ -315,7 +319,7 @@ const styles = StyleSheet.create({
 
     container3:{
         paddingTop:80,
-        width:350,
+        width:380,
        // backgroundColor:"green",
 
         

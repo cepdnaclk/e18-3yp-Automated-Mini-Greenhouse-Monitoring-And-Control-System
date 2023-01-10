@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert,ScrollView, KeyboardAvoidingView} from 'react-native';
+import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert,ScrollView, KeyboardAvoidingView, Dimensions} from 'react-native';
 import ButtonWhite from "../items/ButtonWhite" ;
 import TitleTextView from '../items/TitleTextView';
 import TextInput01 from '../items/TextInput01';
@@ -14,6 +14,7 @@ import { AuthContext } from '../context/AuthContext';
 
 function SignUpLayout({navigation}){
     //const image = require("./images/signUp.png");
+    const { height, width } = Dimensions.get('window');
     const image = require("./images/logInScreen.jpg");
     const val = useContext(AuthContext);
 
@@ -89,11 +90,14 @@ function SignUpLayout({navigation}){
     // ------------------------------------------
     return(
 
-        
+        //<KeyboardAvoidingView style={{flex:1}}>
+         // <ScrollView contentContainerStyle={{flex:1}}>
+          <ScrollView styles={{flex:1}}>
+         <View style={{height:height}}>
         <ImageBackground source={image} style ={styles.container} >
 
             <Loader visible ={loading} />
-            
+           
             <View style={styles.container3} >
                 <TitleTextView title="Sign Up..." heightFromTop="0%" ></TitleTextView>
                 
@@ -171,8 +175,11 @@ function SignUpLayout({navigation}){
             onPress ={validate}
             /> 
             
-
+          
         </ImageBackground>
+        </View>
+        </ScrollView>
+        //</KeyboardAvoidingView>
         
         
         
@@ -187,6 +194,9 @@ const styles = StyleSheet.create({
       backgroundColor: "#fff",
       alignItems: 'center',
       justifyContent: 'center',
+      //position:"absolute",
+      
+      
       
       
       
@@ -205,7 +215,7 @@ const styles = StyleSheet.create({
       
       
       //opacity:0.5,
-      backgroundColor:"rgba(0,0,0,0.4)",
+      backgroundColor:"rgba(0,0,0,0.7)",
       
       
 

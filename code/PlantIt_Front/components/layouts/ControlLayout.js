@@ -15,7 +15,7 @@ import {PlantReducer} from '../redux/reducers'
 
 
 function ControlLayout({navigation}){
-    const image = require("./images/control.png");
+    const image = require("./images/logInScreen.jpg");
 
     const {id} =useSelector(state =>state.PlantReducer);
     const dispatch = useDispatch();
@@ -260,8 +260,8 @@ function ControlLayout({navigation}){
                <ControlCard text={"Lighting (Hours)"} heightFromTop="15%" controlInput={controlInput} setcontrolInput={setcontrolInput}type1='minlightingHours' type2='maxlightingHours'></ControlCard>
             
                <View style={styles.container3}>
-                    <ButtonBrown text={"Back"} heightFromTop="150%" location={() => navigation.navigate('DashBoard')} ></ButtonBrown>
-                    <SetupButton text={"Setup"} heightFromTop="150%" onPress = {validate}></SetupButton> 
+                    <ButtonBrown text={"Back"} heightFromTop="100%" location={() => navigation.navigate('DashBoard')} ></ButtonBrown>
+                    <SetupButton text={"Setup"} heightFromTop="100%" onPress = {validate}></SetupButton> 
                 </View>
             
             </View>

@@ -53,16 +53,18 @@ const styles = StyleSheet.create({
     
     container: {
         //flex: 0.15,
-        backgroundColor: "#FFFF",
+        backgroundColor:"rgba(0,0,0,0.8)",
         alignItems: 'center',
         //justifyContent: 'flex-start',
-        width:300,
+        width:340,
         height:120,
         alignSelf:"center",
         borderRadius:15,
         flexDirection:"column",
         paddingBottom:10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderColor:"white",
+        borderWidth:1
 
       },
 
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
         paddingBottom:0,
         width:130,
         
-        backgroundColor:"#372604",
+        backgroundColor:"rgba(255,255,255,0.1)",
         color:"#FFFF",
         height:35,
         borderRadius:8
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
         paddingRight:15,
         paddingTop:8,
         
-        color:"#372604",
+        color:"#ffff",
         fontSize:18,
         fontWeight:"500"
         
@@ -137,7 +139,7 @@ const styles = StyleSheet.create({
         paddingRight:15,
         paddingTop:8,
         
-        color:"#372604",
+        color:"#ffff",
         fontSize:15,
         fontWeight:"300"
         

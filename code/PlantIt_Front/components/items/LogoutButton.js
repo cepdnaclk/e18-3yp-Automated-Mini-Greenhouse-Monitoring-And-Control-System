@@ -15,14 +15,16 @@ export default function ButtonBrown({text, heightFromTop , lengthLeft,onPress=()
 const styles = StyleSheet.create({
     // ...
     button: {
-      
-      backgroundColor: "#372604",
-      borderRadius: 20,
+      borderColor: "#ffff",
+      borderWidth:3,
       paddingVertical: 10,
       paddingHorizontal: 20,
       top : "10%",
+      // minWidth:"60%",
       justifyContent : "center",
       alignItems: "flex-end",
+      height:59
+      //width:"90%"
       
     },
     buttonText: {

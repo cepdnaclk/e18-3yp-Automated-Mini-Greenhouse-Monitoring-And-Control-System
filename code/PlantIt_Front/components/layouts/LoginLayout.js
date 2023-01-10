@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
       paddingBottom:"8%",
       justifyContent:"space-around",
       //opacity:0.5,
-      backgroundColor:"rgba(0,0,0,0.4)"
+      backgroundColor:"rgba(0,0,0,0.7)"
       
 
     },

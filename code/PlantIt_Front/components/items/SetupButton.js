@@ -16,20 +16,21 @@ const styles = StyleSheet.create({
     // ...
     button: {
       
-      backgroundColor: "#ffff",
-      borderRadius: 20,
+      borderColor: "#ffff",
+      borderWidth:3,
       paddingVertical: 10,
       paddingHorizontal: 20,
       top : "10%",
       // minWidth:"60%",
       justifyContent : "center",
       alignItems: "flex-end",
+      //width:"90%"
 
       
     },
     buttonText: {
       fontSize: 18,
-      color: "#372604",
+      color: "#ffff",
       fontWeight: "bold",
       textAlign: "center",
       textTransform: "uppercase"

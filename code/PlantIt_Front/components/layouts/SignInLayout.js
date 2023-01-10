@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image,Keyboard,ImageBackground,Alert} from 'react-native';
+import { StyleSheet, Text, View ,Image,Keyboard,ImageBackground,Alert,ScrollView,Dimensions} from 'react-native';
 import ButtonWhite from "../items/ButtonWhite" ;
 import TitleTextView from '../items/TitleTextView';
 import TextInput01 from '../items/TextInput01';
@@ -9,6 +9,7 @@ import Loader from '../items/Loader/Loader';
  import { AuthContext } from '../context/AuthContext';
 
 function SignInLayout({navigation}){
+    const { height, width } = Dimensions.get('window');
     const image = require("./images/logInScreen.jpg");
 
     const {userInfo} = useContext(AuthContext);
@@ -71,6 +72,8 @@ function SignInLayout({navigation}){
 
 
     return(
+        <ScrollView styles={{flex:1}}>
+         <View style={{height:height}}>
         <ImageBackground source={image} style ={styles.container}>
 
         <Loader visible ={loading} />
@@ -121,6 +124,9 @@ function SignInLayout({navigation}){
 
         </ImageBackground>
         
+        </View>
+        </ScrollView >
+        
      );
 };
 
@@ -149,7 +155,7 @@ const styles = StyleSheet.create({
       
       
       //opacity:0.5,
-      backgroundColor:"rgba(0,0,0,0.4)",
+      backgroundColor:"rgba(0,0,0,0.7)",
       
       
 
