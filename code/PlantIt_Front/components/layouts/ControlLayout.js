@@ -12,6 +12,7 @@ import { BASE_URL } from "../../config";
 import { useSelector,useDispatch } from 'react-redux';
 import { setID } from '../redux/action';
 import {PlantReducer} from '../redux/reducers'
+const controlDataValid = require('../../features/Validate/controlDataValid')
 
 
 function ControlLayout({navigation}){
@@ -52,52 +53,55 @@ function ControlLayout({navigation}){
 
      const validate = () =>{
         Keyboard.dismiss();
-        let valid = true
+        // let valid = true
           console.log("innnn")
           console.log(controlInput)
-        if(!isInteger(controlInput.minSoilmoisute) && controlInput.minSoilmoisute!= ''){
-               handleError("Please input valid minSoilmoisture","minSoilmoisture" )
-               console.log('soilmoisture')
-               valid = false;
-        } 
-        console.log(valid)
 
-        if(!isInteger(controlInput.maxSoilmoisute) && controlInput.maxSoilmoisute!= ''){
-            handleError("Please input valid maxSoilmoisture","maxSoilmoisute" )
-            valid = false;
-        }
-        
-        console.log(valid)
+         const valid = controlDataValid(controlInput)
+         console.log('valid == '+valid)
+        // if(!isInteger(controlInput.minSoilmoisute) && controlInput.minSoilmoisute!= ''){
+        //        handleError("Please input valid minSoilmoisture","minSoilmoisture" )
+        //        console.log('soilmoisture')
+        //        valid = false;
+        // } 
+        // console.log(valid)
 
-        if(!isInteger(controlInput.minTemp) && controlInput.minTemp!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // if(!isInteger(controlInput.maxSoilmoisute) && controlInput.maxSoilmoisute!= ''){
+        //     handleError("Please input valid maxSoilmoisture","maxSoilmoisute" )
+        //     valid = false;
+        // }
         
-        if(!isInteger(controlInput.maxTemp) && controlInput.maxTemp!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // console.log(valid)
+
+        // if(!isInteger(controlInput.minTemp) && controlInput.minTemp!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
         
-        if(!isInteger(controlInput.minlightingHours) && controlInput.minlightingHours!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // if(!isInteger(controlInput.maxTemp) && controlInput.maxTemp!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
         
-        if(!isInteger(controlInput.maxlightingHours) && controlInput.maxlightingHours!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // if(!isInteger(controlInput.minlightingHours) && controlInput.minlightingHours!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
         
-        if(!isInteger(controlInput.minHumidity) && controlInput.minHumidity!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // if(!isInteger(controlInput.maxlightingHours) && controlInput.maxlightingHours!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
         
-        if(!isInteger(controlInput.maxHumidity) && controlInput.maxHumidity!= ''){
-            handleError("Please input valid email","email" )
-            valid = false;
-        }
+        // if(!isInteger(controlInput.minHumidity) && controlInput.minHumidity!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
+        
+        // if(!isInteger(controlInput.maxHumidity) && controlInput.maxHumidity!= ''){
+        //     handleError("Please input valid email","email" )
+        //     valid = false;
+        // }
          
         
          

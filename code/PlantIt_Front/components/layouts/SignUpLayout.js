@@ -10,6 +10,8 @@ import Loader from '../items/Loader/Loader';
 import AsyncStorage, { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import { AuthContext } from '../context/AuthContext';
 // import { text } from 'express';
+const PasswordValid = require('../../features/Validate/PasswordValid')
+
 
 
 function SignUpLayout({navigation}){
@@ -36,6 +38,7 @@ function SignUpLayout({navigation}){
      const validate = () =>{
          Keyboard.dismiss();
          let valid = true
+         const validPassword = PasswordValid(inputs.password)
         //  console.log("innnn")
           if(!inputs.email){
                 handleError("Please input email","email" )
@@ -51,13 +54,15 @@ function SignUpLayout({navigation}){
             handleError("Please input a macAddress","macID" )
             valid = false;
           }
-          if(!inputs.password){
+          if(!inputs.password ){
+            
             handleError("Please input a password","password" )
             valid = false;
-          } else if(inputs.password.length<5){
-            handleError('Min Passwords length of 5','password')
-            valid = false
-          }
+          } 
+           else if(!validPassword){
+             handleError('Please input a valid password','password')
+             valid = false
+           }
           if (valid){
                 register();
           }
