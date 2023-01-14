@@ -14,6 +14,14 @@ body {
 }
 
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    /* margin-top: 30px; */
+}
+
 
 
 a {
@@ -1016,7 +1024,8 @@ section {
 # Details
 --------------------------------------------------------------*/
 .details .content+.content {
-  margin-top: 100px;
+
+  margin-top: 25px;
 }
 
 .details .content h3 {
@@ -1188,7 +1197,133 @@ section {
     width: 80%;
   }
 }
+/*--------------------------------------------------------------
+Testimonials 2
+---------------------------------------------------------------*/
 
+.testimonials2 {
+  padding: 80px 0;
+   background-position: center center; 
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7); 
+}
+
+.testimonials2 h1 {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcfc;
+}
+.testimonials2 h3 {
+  margin: 0;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  /* text-transform: uppercase; */
+  font-family: "Poppins", sans-serif;
+  color: #fcfcfc;
+}
+
+.testimonials2 .section-header {
+  margin-bottom: 40px;
+}
+
+.testimonials2 .testimonials2-carousel,
+.testimonials2 .testimonials2-slider {
+  overflow: hidden;
+}
+
+.testimonials2 .testimonial2-item {
+  text-align: left;
+  color: #fff;
+}
+
+.testimonials2 .testimonial2-item .testimonial-img {
+  width: 400px;
+  /* border-radius: 50%; */
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+}
+
+.testimonials2 .testimonial2-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
+.testimonials2 .testimonial2-item h4 {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0 0 15px 0;
+}
+
+.testimonials2 .testimonial2-item .quote-icon-left,
+.testimonials2 .testimonial2-item .quote-icon-right {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 26px;
+}
+
+.testimonials2 .testimonial2-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials2 .testimonial2-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials2 .testimonial2-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+  color: #eee;
+}
+
+.testimonials2 .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials2 .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.testimonials2 .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #1acc8d;
+}
+
+@media (min-width: 1024px) {
+  .testimonials2 {
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonials2 .testimonial-item p {
+    width: 80%;
+  }
+}
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1875,6 +2010,12 @@ section {
 }
 /* -------------------------------------------- */
 /* The actual timeline (the vertical ruler) */
+
+.current-stage{
+  background-color: #1ACC8D !important;
+}
+
+
 .main-timeline-4 {
   position: relative;
 }

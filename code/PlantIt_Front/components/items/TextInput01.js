@@ -34,7 +34,8 @@ export default function TextInput01(
             onFocus={()=>{
                 onForcus();
                 setIsForcused(true);
-            }}
+            }
+            }
 
             onBlur={()=>{
                 setIsForcused(false);
@@ -44,15 +45,16 @@ export default function TextInput01(
             {password &&
 
             <Icon
-            style={{fontSize:22,color:'white'}}
+            style={{fontSize:22,color:'white',top:'-85%'}}
             onPress={()=>sethidePassword(!hidePassword)}
             name={hidePassword?'eye-outline':'eye-off-outline'}
+            
             />
             }
 
         
             {error &&
-            <Text style={{color:"#e80606",fontSize:12,marginTop:3} }>{error}</Text>
+            <Text style={{color:"#e80606",fontSize:12,marginTop:3,top:'-59%',alignSelf:'flex-end',paddingRight:'5%'} }>{error}</Text>
             }
             
                 
@@ -68,13 +70,14 @@ const styles = StyleSheet.create({
     
     container: {
         //flex: 0.15,
-        backgroundColor: "#D28716",
+        //backgroundColor: "#D28716",
         alignItems: 'center',
         justifyContent: 'flex-start',
         width:260,
         height:70,
         alignSelf:"center",
         borderRadius:15,
+        
         
         
         

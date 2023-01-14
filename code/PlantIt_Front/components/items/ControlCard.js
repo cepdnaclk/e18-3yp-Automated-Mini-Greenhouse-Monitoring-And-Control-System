@@ -1,11 +1,28 @@
 import { View, StyleSheet, Text , TextInput, Switch} from "react-native";
+import React from "react";
 
-export default function ControlCard({text,heightFromTop}) {
+export default function ControlCard({text,heightFromTop,controlInput,setcontrolInput,type1,type2}) {
+
+    const [checked,setchecked] = React.useState(false);
+    //  console.log(checked)
+
+    const handleOnChange = (text,controlInput) => {
+         console.log(controlInput)
+        if(checked.toggled){
+        setcontrolInput(prevState =>({...prevState,[controlInput]:text}))
+        }
+         else{
+             setcontrolInput(prevState =>({...prevState,[controlInput]:null}))
+         }
+    }
+
     return(
         <View style={[styles.container,{top:heightFromTop}]}>
             <View style={styles.container2}>
                 <Text style={styles.box1}>{text}</Text>
-                <Switch ></Switch>
+                <Switch
+                onValueChange={(value) => setchecked({toggled:value})} 
+                value={checked.toggled}></Switch>
             </View>
 
             <View style={styles.container3} top={"1.5%"}>
@@ -14,8 +31,14 @@ export default function ControlCard({text,heightFromTop}) {
             </View>
 
             <View style={styles.container4}>
-                <TextInput style={styles.input}></TextInput>
-                <TextInput style={styles.input}></TextInput>
+                <TextInput
+                style={styles.input}
+                onChangeText={text =>handleOnChange(text,`${type1}`)}
+                 ></TextInput>
+                <TextInput
+                style={styles.input}
+                onChangeText={text =>handleOnChange(text,`${type2}`)}
+                 ></TextInput>
             </View>
             
         </View>
@@ -30,16 +53,18 @@ const styles = StyleSheet.create({
     
     container: {
         //flex: 0.15,
-        backgroundColor: "#FFFF",
+        backgroundColor:"rgba(0,0,0,0.8)",
         alignItems: 'center',
         //justifyContent: 'flex-start',
-        width:300,
+        width:340,
         height:120,
         alignSelf:"center",
         borderRadius:15,
         flexDirection:"column",
         paddingBottom:10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderColor:"white",
+        borderWidth:1
 
       },
 
@@ -59,7 +84,7 @@ const styles = StyleSheet.create({
         paddingBottom:0,
         width:130,
         
-        backgroundColor:"#372604",
+        backgroundColor:"rgba(255,255,255,0.1)",
         color:"#FFFF",
         height:35,
         borderRadius:8
@@ -76,7 +101,7 @@ const styles = StyleSheet.create({
         paddingRight:15,
         paddingTop:8,
         
-        color:"#372604",
+        color:"#ffff",
         fontSize:18,
         fontWeight:"500"
         
@@ -114,7 +139,7 @@ const styles = StyleSheet.create({
         paddingRight:15,
         paddingTop:8,
         
-        color:"#372604",
+        color:"#ffff",
         fontSize:15,
         fontWeight:"300"
         

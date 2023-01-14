@@ -28,9 +28,13 @@ const styles = StyleSheet.create({
     },
 
     titleText: {
-      fontSize: 60,
+      fontSize: 80,
       fontWeight: "bold",
       color: "white",
+      textShadowColor:"black",
+      textShadowOffset:{width:5,height:5},
+      textShadowRadius:8,
+      
 
     },
     

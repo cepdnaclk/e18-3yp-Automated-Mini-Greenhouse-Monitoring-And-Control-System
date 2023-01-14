@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert} from 'react-native';
+import { StyleSheet, Text, View ,Image,ImageBackground, Keyboard,Alert,ScrollView, KeyboardAvoidingView, Dimensions} from 'react-native';
 import ButtonWhite from "../items/ButtonWhite" ;
 import TitleTextView from '../items/TitleTextView';
 import TextInput01 from '../items/TextInput01';
@@ -10,10 +10,14 @@ import Loader from '../items/Loader/Loader';
 import AsyncStorage, { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import { AuthContext } from '../context/AuthContext';
 // import { text } from 'express';
+const PasswordValid = require('../../features/Validate/PasswordValid')
+
 
 
 function SignUpLayout({navigation}){
-    const image = require("./images/signUp.png");
+    //const image = require("./images/signUp.png");
+    const { height, width } = Dimensions.get('window');
+    const image = require("./images/logInScreen.jpg");
     const val = useContext(AuthContext);
 
     // -------------------------------------
@@ -34,6 +38,7 @@ function SignUpLayout({navigation}){
      const validate = () =>{
          Keyboard.dismiss();
          let valid = true
+         const validPassword = PasswordValid(inputs.password)
         //  console.log("innnn")
           if(!inputs.email){
                 handleError("Please input email","email" )
@@ -49,13 +54,15 @@ function SignUpLayout({navigation}){
             handleError("Please input a macAddress","macID" )
             valid = false;
           }
-          if(!inputs.password){
+          if(!inputs.password ){
+            
             handleError("Please input a password","password" )
             valid = false;
-          } else if(inputs.password.length<5){
-            handleError('Min Passwords length of 5','password')
-            valid = false
-          }
+          } 
+           else if(!validPassword){
+             handleError('Please input a valid password','password')
+             valid = false
+           }
           if (valid){
                 register();
           }
@@ -87,15 +94,17 @@ function SignUpLayout({navigation}){
 
     // ------------------------------------------
     return(
-        <ImageBackground source={image} style ={styles.container}>
+
+        //<KeyboardAvoidingView style={{flex:1}}>
+         // <ScrollView contentContainerStyle={{flex:1}}>
+          <ScrollView styles={{flex:1}}>
+         <View style={{height:height}}>
+        <ImageBackground source={image} style ={styles.container} >
 
             <Loader visible ={loading} />
-            
-            <View style={styles.container2}>
-                <TitleTextView title="Sign Up"
-                heightFromTop="-190%"
-                lengthLeft="-30%"
-                />
+           
+            <View style={styles.container3} >
+                <TitleTextView title="Sign Up..." heightFromTop="0%" ></TitleTextView>
                 
                 
             </View>
@@ -108,10 +117,12 @@ function SignUpLayout({navigation}){
             password
             />  */}
 
+            <View style={styles.container2}>
             <TextInput01 
             placeholder="Enter Your name" 
+            placeholderTextColor="#808080"
             text={"User Name"} 
-            heightFromTop="12%"
+            heightFromTop="0%"
             error={errors.name}
             onForcus={() =>{
                 handleError(null,'name');
@@ -119,10 +130,12 @@ function SignUpLayout({navigation}){
             onChangeText={text =>handleOnChange(text,'name')}
             />
 
-            <TextInput01 
-            placeholder="Enter Your Email" 
+            <TextInput01
+             
+            placeholder="Enter Your Email"
+            placeholderTextColor="#808080" 
             text={"Email"} 
-            heightFromTop="14%"
+            heightFromTop="0%"
             error={errors.email}
             onForcus={() =>{
                 handleError(null,'email');
@@ -131,9 +144,10 @@ function SignUpLayout({navigation}){
             />
 
             <TextInput01 
-            placeholder="Enter Your Device MacAdress" 
-            text={"MacAddress"} 
-            heightFromTop="16%" 
+            placeholder="Enter Your Device Number"
+            placeholderTextColor="#808080" 
+            text={"Device Number"} 
+            heightFromTop="0%" 
             error={errors.macID}
             onForcus={() =>{
                 handleError(null,'macID');
@@ -142,9 +156,10 @@ function SignUpLayout({navigation}){
             />
 
             <TextInput01 
-            placeholder="Enter Your Password" 
+            placeholder="Enter Your Password"
+            placeholderTextColor="#808080" 
             text={"Password"} 
-            heightFromTop="18%" 
+            heightFromTop="0%" 
             error={errors.password}
             onForcus={() =>{
                 handleError(null,'password');
@@ -153,21 +168,29 @@ function SignUpLayout({navigation}){
             onChangeText={text =>handleOnChange(text,'password')}
             />
             
+            </View>
             <StatusBar style="auto" />
 
             
 
             <Signupbutton
             text={"sign up"} 
-            heightFromTop="330%" 
-            lengthLeft="17%" 
+            heightFromTop="30%" 
+            lengthLeft="26%" 
             onPress ={validate}
             /> 
-
+            
+          
         </ImageBackground>
+        </View>
+        </ScrollView>
+        //</KeyboardAvoidingView>
+        
+        
         
      );
 };
+
 
 
 const styles = StyleSheet.create({
@@ -176,14 +199,41 @@ const styles = StyleSheet.create({
       backgroundColor: "#fff",
       alignItems: 'center',
       justifyContent: 'center',
+      //position:"absolute",
+      
+      
       
       
       
     },
 
     container2:{
+        flex: 0.85,
+      //backgroundColor: "#fff",
+      alignItems: 'center',
+      justifyContent: 'center',
+      width:"80%",
+      marginTop:"20%",
+      borderColor:"#ffff",
+      borderWidth:5,
+      justifyContent:"space-around",
+      
+      
+      //opacity:0.5,
+      backgroundColor:"rgba(0,0,0,0.7)",
+      
+      
+
+    },
+
+    container3:{
         flexDirection: "row",
-        gap:"2rem",
+        //gap:"2rem",
+        marginTop:"0%",
+        marginLeft:"10%",
+        justifyContent:"flex-start",
+        alignSelf:"flex-start",
+        
         
     },
   });

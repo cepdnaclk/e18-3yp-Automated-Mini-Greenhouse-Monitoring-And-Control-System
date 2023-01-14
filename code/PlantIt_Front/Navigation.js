@@ -4,11 +4,13 @@ import SignUpLayout from "./components/layouts/SignUpLayout";
 import LoginLayout from "./components/layouts/LoginLayout";
 import DashBoardLayout from "./components/layouts/DashBoardLayout";
 import ControlLayout from "./components/layouts/ControlLayout";
+import ChatScreen from "./components/layouts/ChatScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { useContext } from "react";
 import { AuthContext } from "./components/context/AuthContext";
 import SplashScreen from "./components/layouts/SplashScreen";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +39,11 @@ const Navigation = () =>{
                     component={ControlLayout}
                     />  
                     
+                    <Stack.Screen 
+                    name='Chat' 
+                    component={ChatScreen}
+                    />
+                    
                     </>
                     ):(
                     <>
@@ -54,6 +61,7 @@ const Navigation = () =>{
                     name='LogIn' 
                     component={LoginLayout}
                     />
+
                       
                     </>  
                     )}

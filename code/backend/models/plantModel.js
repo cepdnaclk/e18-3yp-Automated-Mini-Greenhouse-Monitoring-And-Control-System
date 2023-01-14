@@ -6,29 +6,37 @@ const plantSchema = mongoose.Schema({
         required:true,
         ref:'User'
     },
-    name:{
+    minTemp:{
         type: String,
-        required: [true, 'Please add the Plant Name']
+         required: [false, 'Please add the Minimum Temperature']
     },
-    temperature:{
+    maxTemp:{
         type: String,
-        required: [true, 'Please add a Temperature Requirement']
+         required: [false, 'Please add the Maximum Temperature']
     },
-    humidity:{
+    minHumidity:{
         type: String,
-        required: [true, 'Please add a Humidity Requirement']
+        required: [false, 'Please add the Minimum Humidity']
     },
-    soilmoisture:{
+    maxHumidity:{
         type: String,
-        required: [true, 'Please add soil Moisture Requirement'], 
+        required: [false, 'Please add the Maximum Humidity'], 
     },
-    soiltype:{
+    minSoilMoisture:{
         type: String,
-        required: [true, 'Please add Soil Type Requirement']
+        required: [false, 'Please add Minimum Soil Moisture']
     },
-    nutrition:{
+    maxSoilMoisture:{
         type: String,
-        required: [true, 'Please add Nutrition Requirement']
+        required: [false, 'Please add Maximum Soil Moisture'], 
+    },
+    minLightingHours:{
+        type: String,
+        required: [false, 'Please add Minimum Lighting Hours Required']
+    },
+    maxLightingHours:{
+        type: String,
+        required: [false, 'Please add Maximum Lighting Hours Required']
     }
 },{
     timestamps: true,
