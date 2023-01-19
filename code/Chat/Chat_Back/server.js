@@ -18,8 +18,30 @@ connection.once('open',() => {
     console.log("MongoDB database connection established successfully");
 })
 
-const messegeRouter = require('./models/routes/messege');
-app.use('/messeges',messegeRouter);
+// const messegeRouter = require('./models/routes/messege');
+// app.use('/messeges',messegeRouter);
+
+//------------------
+
+const bodyParser = require('body-parser');
+
+
+app.get('/messages', (req, res) => {
+  // Get previous messages from database
+  // ...
+  res.json(messages);
+});
+
+app.post('/messages', (req, res) => {
+  const messages = req.body.messages;
+  // Save messages to database
+  // ...
+  res.json({ status: 'success' });
+});
+
+
+
+//---------------
 
 app.listen(port,()=>{
     console.log(`Server is running on port: ${port}`);
